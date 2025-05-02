@@ -21,6 +21,10 @@ import {
   getProductBySlug,
   getRelatedProductsByCategory,
 } from '@/lib/actions/product.action'
+import BrowsingHistoryList from '@/components/shared/browsing-history-list'
+import AddToBrowsingHistory from '@/components/shared/product/add-to-browsing-history'
+import AddToCart from '@/components/shared/product/add-to-cart'
+import { generateId, round2 } from '@/lib/utils'
 // import { getTranslations } from 'next-intl/server'
 
 export async function generateMetadata(props: {
@@ -61,6 +65,7 @@ export default async function ProductDetails(props: {
   //   const t = await getTranslations()
   return (
     <div>
+      <AddToBrowsingHistory id={product._id} category={product.category} />
       <section>
         <div className='grid grid-cols-1 md:grid-cols-5  '>
           <div className='col-span-2'>
@@ -121,7 +126,7 @@ export default async function ProductDetails(props: {
                   <div className='text-destructive text-xl'>Out of Stock</div>
                 )}
 
-                {/* {product.countInStock !== 0 && (
+                {product.countInStock !== 0 && (
                   <div className='flex justify-center items-center'>
                     <AddToCart
                       item={{
@@ -139,7 +144,7 @@ export default async function ProductDetails(props: {
                       }}
                     />
                   </div>
-                )} */}
+                )}
               </CardContent>
             </Card>
           </div>
@@ -159,9 +164,9 @@ export default async function ProductDetails(props: {
           title={`Best Sellers in ${product.category}`}
         />
       </section>
-      {/* <section>
+      <section>
         <BrowsingHistoryList className='mt-10' />
-      </section> */}
+      </section>
     </div>
   )
 }
