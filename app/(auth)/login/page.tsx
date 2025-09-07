@@ -129,7 +129,7 @@ export default function LoginPage() {
       <Card className='w-full max-w-md shadow-lg border rounded-2xl'>
         <CardHeader>
           <CardTitle className='text-center text-2xl font-bold text-primary'>
-            Login
+            Sign In
           </CardTitle>
         </CardHeader>
         <CardContent>

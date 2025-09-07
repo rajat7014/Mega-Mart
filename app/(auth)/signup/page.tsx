@@ -143,7 +143,7 @@ export default function SignupPage() {
           <p className='text-sm text-center text-muted-foreground mt-4'>
             Already have an account?{' '}
             <a href='/login' className='text-primary hover:underline'>
-              Login
+              Sign In
             </a>
           </p>
         </CardContent>
