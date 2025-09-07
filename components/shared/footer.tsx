@@ -30,7 +30,7 @@ export default function Footer() {
           </p>
         </div>
         <div className='mt-8 flex justify-center text-sm text-gray-400'>
-          123 Main Street, Anytown, CA Zip 12345 | +1 (123) 456-7890
+          123 Main Street, Anytown, CA Zip 12345 | +91 6399719438
         </div>
       </div>
     </footer>
