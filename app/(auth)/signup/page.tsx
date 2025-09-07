@@ -95,7 +95,7 @@ export default function SignupPage() {
     try {
       await api.post('/auth/signup', { name, email, password })
       toast.success('Signup successful! Please login.')
-      router.push('/login')
+      router.push('/')
     } catch (err: unknown) {
       if (err instanceof Error) {
         setError(err.message)
